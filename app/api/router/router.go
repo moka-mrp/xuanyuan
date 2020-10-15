@@ -28,7 +28,7 @@ func RegisterRoute(router *gin.Engine) {
 		admin.PUT("/account",adminFunc.AddAccount)
 	}
 	//2.测试管理  sam@2020-08-17 14:33:06
-	test := router.Group("/test")
+	test := api.Group("/test")
 	{
 		test.POST("/fast", testFunc.Fast)           //快速入门体验
 		test.GET("/log", testFunc.Log)              //Log示例

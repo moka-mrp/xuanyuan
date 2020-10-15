@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-//http://localhost:9999/test/redis
+//http://localhost:9999/v1/test/redis
 func Redis(c *gin.Context) {
 	pools:=rds.GetRedis()
 	//默认池子的使用

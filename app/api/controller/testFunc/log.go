@@ -8,7 +8,7 @@ import (
 
 
 //todo 提供支持json输出，方便elk采集
-//http://localhost:9999/test/log
+//http://localhost:9999/v1/test/log
 //@author sam@2020-08-08 15:43:09
 func Log(c *gin.Context) {
 	//方式一

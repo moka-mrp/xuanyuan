@@ -21,7 +21,7 @@ type FastResponse struct {
 }
 
 //快速体验的一个案例
-//curl -XPOST http://localhost:9999/test/fast -H "Content-Type: application/json" -d  '{"name":"sam","url":"https://www.baidu.com"}'
+//curl -XPOST http://localhost:9999/v1/test/fast -H "Content-Type: application/json" -d  '{"name":"sam","url":"https://www.baidu.com"}'
 //@author sam@2020-04-07 11:04:03
 func Fast(c *gin.Context) {
 	//(1)提取客户端传递的json字符串并检测参数

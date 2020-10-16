@@ -35,3 +35,8 @@ func TestIsNil(t *testing.T){
 	fmt.Println(IsNil(nil)) //true
 
 }
+
+
+func TestGetVersion(t *testing.T){
+	fmt.Println(GetVersion())
+}

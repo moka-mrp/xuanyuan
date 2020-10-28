@@ -62,7 +62,7 @@ build(){
         tar --exclude=*.git --exclude=*.go  --exclude=*.log -czvf ${TARGET_PACKAGE}.tar.gz  \
          ./bin/${TARGET}  \
          ./deploy.sh \
-         ./docs/conf \
+         ./docs \
          ./logs \
          ./resources \
          ./public

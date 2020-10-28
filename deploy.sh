@@ -10,8 +10,8 @@
 
 echo "PID for deploy.sh = $$"
 tell(){
-    echo "Usage: $0 {run|start|stop|rerun|restart} {local|pro|dev}";
-    echo "      eg: bash deploy.sh run dev";
+    echo "Usage: $0 run|start|stop|rerun|restart";
+    echo "      eg: bash deploy.sh run";
     exit 404;
 }
 
@@ -28,18 +28,20 @@ function check_code() {
 
 
 #(1)参数设置默认值
+#export ENV=local
 do="$1"
-penv="$2"
+#penv="$2"
 env="$ENV"
 EXEC_NAME="shanbumin"
 EXEC="./bin/${EXEC_NAME}"
-shift 2
+#去掉deploy.sh必须的1个参数，后续参数都传给可执行的go程序  比如 ./shanbumin.run  run api ==> go run main.go api
+shift 1
 #(2)判断env是否指定
 #参数指明的配置文件优先级高于环境变量传递的额
 #todo 后续转成配置中心化之后就可以舍弃这一步骤了
-if [ ${penv} ];then
-  env="${penv}"
-fi
+#if [ ${penv} ];then
+#  env="${penv}"
+#fi
 
 if [ ${env} ];then
   cp  -f ./docs/conf/${env}.env   ./.env

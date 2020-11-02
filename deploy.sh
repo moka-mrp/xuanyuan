@@ -2,7 +2,7 @@
 
 # Author   Sam  <shanbumin@qq.com>
 # Date     2020-08-11 11:44:22
-# bash deploy.sh  start dev
+# bash deploy.sh  start
 #$1是指明开启指令,如 start|stop|reload|restart
 #$@所有参数，不包含命令本身
 #todo 真机部署这里后续可以考虑换成systemctl后台托管程序

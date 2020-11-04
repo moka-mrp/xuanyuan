@@ -23,6 +23,7 @@ var (
 type Config struct {
 	Env     string                  `toml:"Env"`
 	Debug   bool                    `toml:"Debug"`
+	ID      string                  `toml:"id"`//接口平台标识
 	Log     config.LogConfig        `toml:"Log"`
 	Redis   config.RedisMultiConfig `toml:"Redis"`
 	Db      config.DbConfig         `toml:"Db"`
